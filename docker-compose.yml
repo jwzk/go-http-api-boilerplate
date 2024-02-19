@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    ports:
+      - "4100:4100"
+
+  scalar:
+    image: scalarapi/api-reference:latest
+    ports:
+      - "4000:8080"
+    volumes:
+      - ./:/docs:ro
+    depends_on:
+      - api
