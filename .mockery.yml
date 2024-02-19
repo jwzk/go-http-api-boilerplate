@@ -1,0 +1,8 @@
+with-expecter: true
+packages:
+    github.com/jwzk/go-http-api-boilerplate/internal/domain/port:
+        config:
+            dir: "internal/domain/port/mocks"
+            outpkg: "mocks"
+        interfaces:
+            BookDAO:
